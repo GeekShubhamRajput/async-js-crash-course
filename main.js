@@ -205,3 +205,12 @@ async function parallelStart(){
   ])
 }
 parallelStart(); // Logs 'World' 'Hello', Total time taken = 2 seconds
+
+// Event Loop
+console.log('First');
+
+setTimeout(() => {
+  console.log('Second')
+}, 0)
+
+console.log('Third') // First, Third, Second
